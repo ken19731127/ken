@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head><title>単語帳</title></head>
+<body>
+  <h1>AI連動型単語帳</h1>
+  <a href="/add">単語追加</a>
+  <table border="1">
+    <tr><th>番号</th><th>単語</th><th>意味</th><th>語源</th><th>関連語</th><th>ジャンル</th><th>追加日時</th></tr>
+    {% for word in words %}
+      <tr>
+        <td>{{ loop.index }}</td>
+        <td>{{ word[1] }}</td>
+        <td>{{ word[2] }}</td>
+        <td>{{ word[3] }}</td>
+        <td>{{ word[4] }}</td>
+        <td>{{ word[5] }}</td>
+        <td>{{ word[6] }}</td>
+      </tr>
+    {% endfor %}
+  </table>
+</body>
+</html>
